@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E27B4024-ED8E-41A8-888F-E721DA2F0CE3}</ProjectGuid>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>System.Json</RootNamespace>
+    <AssemblyName>System.Json</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="monotouch" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\System.JSON.DLL_01_WP\JsonArray.cs">
+      <Link>JsonArray.cs</Link>
+    </Compile>
+    <Compile Include="..\System.JSON.DLL_01_WP\JsonObject.cs">
+      <Link>JsonObject.cs</Link>
+    </Compile>
+    <Compile Include="..\System.JSON.DLL_01_WP\JsonPrimitive.cs">
+      <Link>JsonPrimitive.cs</Link>
+    </Compile>
+    <Compile Include="..\System.JSON.DLL_01_WP\JsonType.cs">
+      <Link>JsonType.cs</Link>
+    </Compile>
+    <Compile Include="..\System.JSON.DLL_01_WP\JsonValue.cs">
+      <Link>JsonValue.cs</Link>
+    </Compile>
+    <Compile Include="..\System.JSON.DLL_01_WP\Serialization\JavaScriptObjectDeserializer.cs">
+      <Link>Serialization\JavaScriptObjectDeserializer.cs</Link>
+    </Compile>
+    <Compile Include="..\System.JSON.DLL_01_WP\Serialization\JavaScriptReader.cs">
+      <Link>Serialization\JavaScriptReader.cs</Link>
+    </Compile>
+    <Compile Include="..\System.JSON.DLL_01_WP\System\Collections\Generic\Dictionary.ExtensionMethods.cs">
+      <Link>System\Collections\Generic\Dictionary.ExtensionMethods.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="bb06d3fa-8dfe-46b2-a695-af8c99072eab" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
